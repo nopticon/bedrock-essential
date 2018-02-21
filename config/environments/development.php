@@ -5,9 +5,9 @@ define('WP_DEBUG', true);
 define('SCRIPT_DEBUG', true);
 
 define('DB_NAME',     '');
-define('DB_USER',     'msuser');
-define('DB_PASSWORD', 'msuser');
-define('DB_HOST',     'localhost');
+define('DB_USER',     'root');
+define('DB_PASSWORD', '');
+define('DB_HOST',     '127.0.0.1');
 
 define('WP_HOME', WP_PROTOCOL . '://' . $_SERVER['SERVER_NAME'] . '');
 define('WP_SITEURL', WP_HOME . '/wp');

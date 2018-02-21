@@ -27,9 +27,9 @@ define('WP_PROTOCOL', $port === 443 ? 'https' : 'http');
 
 /**
  * Set up our global environment constant and load its config first
- * Default: development
+ * Default: production
  */
-define('WP_ENV', env('WP_ENV') ?: 'development');
+define('WP_ENV', env('WP_ENV') ?: 'production');
 
 $env_config = __DIR__ . '/environments/' . WP_ENV . '.php';
 
@@ -59,7 +59,9 @@ define('DB_PASSWORD', env('DB_PASSWORD'));
 define('DB_HOST', env('DB_HOST') ?: 'localhost');
 define('DB_CHARSET', 'utf8mb4');
 define('DB_COLLATE', '');
-$table_prefix = env('DB_PREFIX') ?: 'wp_';
+
+$table_prefix = defined('DB_PREFIX') ? DB_PREFIX : 'wp_';
+$table_prefix = env('DB_PREFIX') ?: $table_prefix;
 
 /**
  * Authentication Unique Keys and Salts

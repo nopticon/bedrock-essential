@@ -9,7 +9,7 @@ define('DISALLOW_FILE_MODS', true);
 define('DB_NAME',     '');
 define('DB_USER',     '');
 define('DB_PASSWORD', '');
-define('DB_HOST',     'localhost');
+define('DB_HOST',     '127.0.0.1');
 
 define('WP_HOME', WP_PROTOCOL . '://' . $_SERVER['SERVER_NAME'] . '');
 define('WP_SITEURL', WP_HOME . '/wp');
